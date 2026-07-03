@@ -100,7 +100,7 @@ convertSuggester:
 contextMenu:
   insertBibleQuote: Bibliai idézet beszúrása
 notices:
-  convertedBibleReferences: {{count}} bibliai hivatkozás átalakítva
+  convertedBibleReferences: '{{count}} bibliai hivatkozás átalakítva'
   pleaseSelectText: Kérjük, válasszon ki szöveget az átalakításhoz
   noBibleReferencesFound: Nem találhatók bibliai hivatkozások
   bibleQuotesInserted: Bibliai idézetek sikeresen beszúrva
@@ -128,7 +128,7 @@ errors:
   versesAscendingOrder: A verseknek növekvő sorrendben kell lenniük
   chaptersAscendingOrder: A fejezeteknek növekvő sorrendben kell lenniük
   invalidVerseFormat: Érvénytelen versformátum
-invalidReferenceFormat: Érvénytelen formátum
+  invalidReferenceFormat: Érvénytelen formátum
   unsupportedLanguage: Nem támogatott nyelv
   offlineBibleNotInstalled: Nincs telepítve offline Biblia a(z) {{language}} nyelvhez. Importáljon egy Biblia EPUB fájlt a beállításokban az offline idézetek engedélyezéséhez.
   offlineBibleVerseMissing: A kért versek hiányoznak vagy olvashatatlanok az offline Bibliában a(z) {{language}} nyelvhez.
