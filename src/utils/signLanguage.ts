@@ -50,6 +50,8 @@ export const SIGN_LANGUAGE_MAP: Partial<Record<Language, Language>> = {
   BFL: 'F',
   CRS: 'F',
   CML: 'F',
+  // Hungarian base
+  HDF: 'H',
   // Croatian base
   HZJ: 'C',
   // Vietnamese base

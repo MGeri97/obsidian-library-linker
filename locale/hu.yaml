@@ -1,0 +1,136 @@
+settings:
+  language:
+    name: Nyelv
+    description: Válassza ki a Bibliai hivatkozások nyelvét
+  openAutomatically:
+    name: Hivatkozások automatikus megnyitása
+    description: A "Hivatkozás és megnyitás" parancsot a lista tetejére helyezi
+  updatedLinkStructure:
+    name: Hivatkozás szövegének megtartása
+    description: Ha engedélyezve van, a jelenlegi hivatkozás szövege megmarad a Bibliai szöveg átalakításakor
+    keepCurrentStructure: Jelenlegi struktúra megtartása
+    usePluginSettings: Bővítmény beállításainak használata
+  noLanguageParameter:
+    name: Hivatkozások nyelvfüggetlen létrehozása
+    description: Ha engedélyezve van, a hivatkozásokhoz nem kerül nyelvi paraméter. A hivatkozások a JW Library nyelvén nyílnak meg.
+  reconvertExistingLinks:
+    name: Már meglévő hivatkozások újrakonvertálása
+    description: Ha engedélyezve van, a már konvertált jwlibrary:// hivatkozások újrakonvertálódnak a jelenlegi formázási beállítások szerint. Ez lehetővé teszi, hogy az összes hivatkozás megfeleljen a legújabb preferenciáinak.
+  bookLength:
+    name: Hivatkozás szövegének hossza
+    description: Válassza ki a hivatkozás szövegének hosszát
+    short: Rövid
+    medium: Közepes
+    long: Hosszú
+  linkStyling:
+    name: Hivatkozás stílusa
+    description: Válassza ki a karaktereket vagy emoji-kat, amelyeket a hivatkozás elé, mögé vagy belsejébe szeretne hozzáadni, valamint a betűtípust
+    reset: 'Alapértelmezett visszaállítása: "{{default}}"'
+    prefixOutsideLink:
+      name: Előtag a hivatkozáson kívül
+      description: Szöveg hozzáadása a hivatkozás elé
+    prefixInsideLink:
+      name: Előtag a hivatkozáson belül
+      description: Szöveg hozzáadása a hivatkozás szövegének elejére
+    suffixInsideLink:
+      name: Utótag a hivatkozáson belül
+      description: Szöveg hozzáadása a hivatkozás szövegének végére
+    suffixOutsideLink:
+      name: Utótag a hivatkozáson kívül
+      description: Szöveg hozzáadása a hivatkozás után
+    presets:
+      name: Stílus előbeállítások
+      description: Válasszon egy előbeállított stílust a hivatkozáshoz
+    fontStyle:
+      name: Betűtípus stílusa
+      description: Válassza ki a betűtípus stílusát a hivatkozás szövegéhez
+      normal: Normál
+      italic: Dőlt
+      bold: Félkövér
+    preview:
+      name: Hivatkozás előnézete
+  bibleQuote:
+    name: Bibliai idézet formázása
+    description: Válassza ki, hogyan legyenek formázva a Bibliai idézetek beszúráskor
+    presets:
+      name: Sablon előbeállítások
+      short: Hivatkozás + idézet
+      plain: Hivatkozás az idézetben
+      foldable: Összecsukható kiemelés
+      expanded: Kiterjesztett kiemelés
+    template:
+      name: Idézet sablon
+      description: 'Testreszabhatja az idézet formátumát a következő változók használatával: {bibleRef}, {bibleRefLinked}, {quote}'
+    preview:
+      name: Bibliai idézet előnézete
+  offlineBible:
+    name: Offline Biblia
+    description: Importáljon egy Biblia EPUB-ot egyszer, és használja a helyi fejezetadatokat offline idézetekhez.
+    enabled:
+      name: Offline Biblia engedélyezése
+      description: Engedélyezze, hogy az idézet-feldolgozó folyamat az importált helyi Biblia-adatokat használja.
+    preferOffline:
+      name: Offline idézetek előnyben részesítése
+      description: Ellenőrizze az importált offline Bibliát, mielőtt online lekérést próbálna.
+    allowOnlineFallback:
+      name: Online tartalék módszer engedélyezése
+      description: Ha az offline adatok hiányoznak, engedélyezze a bővítmény számára, hogy megpróbálja az online hivatkozás szolgáltatót.
+    installedList:
+      name: Telepített offline Bibliák
+      description: Nyelvenként egy offline Biblia telepíthető. A nyelvet az EPUB metaadataiból észleli.
+      empty: Még nincs telepített offline Biblia.
+      entry: '{{sourceFileName}} — {{chapterCount}} fejezet, importálva {{importedAt}}'
+    actions:
+      name: Offline Biblia műveletek
+      description: EPUB-fájl importálásával új nyelvet adhat hozzá. Ha egy meglévőt szeretne kicserélni, először távolítsa el azt.
+      import: Biblia EPUB importálása
+      importing: Importálás...
+      openFolder: Offline Biblia mappa megnyitása
+commands:
+  linkUnlinkedBibleReferences: A nem összekapcsolt bibliai hivatkozások összekapcsolása
+  convertToJWLibraryLinks: Hivatkozások átalakítása JW Library hivatkozásokká
+  insertBibleQuotes: Bibliai idézetek beszúrása a JW Library hivatkozásokhoz
+  insertBibleQuoteAtCursor: Bibliai idézet beszúrása a kurzornál
+convertSuggester:
+  emptyStateText: Válasszon egy átalakítási típust
+  options:
+    all: Mind
+    bible: Bibliai hivatkozások
+    publication: Kiadványok
+contextMenu:
+  insertBibleQuote: Bibliai idézet beszúrása
+notices:
+  convertedBibleReferences: {{count}} bibliai hivatkozás átalakítva
+  pleaseSelectText: Kérjük, válasszon ki szöveget az átalakításhoz
+  noBibleReferencesFound: Nem találhatók bibliai hivatkozások
+  bibleQuotesInserted: Bibliai idézetek sikeresen beszúrva
+  bibleQuotesInsertedSelection: Bibliai idézetek beszúrva a kijelölt szöveghez
+  bibleQuoteInsertedAtCursor: Bibliai idézet beszúrva a kurzornál
+  noBibleLinksFound: Nem találhatók JW Library hivatkozások
+  noBibleLinkAtCursor: Nem található JW Library hivatkozás a kurzornál
+  bibleQuoteAlreadyExists: A bibliai idézet már létezik
+  errorInsertingQuotes: Hiba a bibliai idézetek beszúrásakor
+  bibleQuoteFetchFailed: Nem sikerült lekérni a bibliai idézetet — próbálja újra
+  offlineBibleImported: Offline Biblia importálva a(z) {{language}} nyelvhez
+  offlineBibleRemoved: Offline Biblia eltávolítva a(z) {{language}} nyelvhez
+  offlineBibleAlreadyInstalled: Már telepítve van egy offline Biblia a(z) {{language}} nyelvhez. Először távolítsa el a régi verziót az újraimportáláshoz.
+  offlineBibleImportFailed: Nem sikerült importálni az offline Biblia EPUB fájlt
+  offlineBibleOpenFolderFailed: Nem sikerült megnyitni az offline Biblia mappát
+suggestions:
+  createLink: 'Hivatkozás létrehozása: {{text}}'
+  createLinks: 'Hivatkozások létrehozása: {{text}}'
+  createAndOpen: 'Hivatkozás létrehozása és megnyitás: {{text}}'
+  createMultipleAndOpenFirst: 'Hivatkozások létrehozása és az első megnyitása: {{text}}'
+  typing: 'Bibliai hivatkozás megadása: {{text}}'
+  typingEmpty: Bibliai hivatkozás megadása
+errors:
+  invalidVerseNumber: Érvénytelen versszám
+  versesAscendingOrder: A verseknek növekvő sorrendben kell lenniük
+  chaptersAscendingOrder: A fejezeteknek növekvő sorrendben kell lenniük
+  invalidVerseFormat: Érvénytelen versformátum
+invalidReferenceFormat: Érvénytelen formátum
+  unsupportedLanguage: Nem támogatott nyelv
+  offlineBibleNotInstalled: Nincs telepítve offline Biblia a(z) {{language}} nyelvhez. Importáljon egy Biblia EPUB fájlt a beállításokban az offline idézetek engedélyezéséhez.
+  offlineBibleVerseMissing: A kért versek hiányoznak vagy olvashatatlanok az offline Bibliában a(z) {{language}} nyelvhez.
+  offlineBibleLookupFailed: Az offline Biblia lekérdezése sikertelen.
+  onlineFallbackDisabled: Az online tartalék módszer le van tiltva.
